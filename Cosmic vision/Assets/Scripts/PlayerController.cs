@@ -90,9 +90,9 @@ public class PlayerController : MonoBehaviour
         }
 
         //player rotation
-        player.GetComponent<Rigidbody>().transform.Rotate(0, (Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime), 0, Space.World);
+        player.GetComponent<Rigidbody>().transform.Rotate(0, (Input.GetAxis("Mouse X") * rotationSpeed), 0, Space.World);
         //Head rotation
-        mouseY = (-Input.GetAxis("Mouse Y")) * rotationSpeed * Time.deltaTime;
+        mouseY = (-Input.GetAxis("Mouse Y")) * rotationSpeed;
         xRotation = xRotation + mouseY;
         xRotation = Mathf.Clamp(xRotation, clampMin, clampMax);
         Vector3 rotationVector = new Vector3(xRotation, 0f, 0f);
@@ -101,14 +101,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Terrain")
+        if (other.tag == "Ground")
         {
             grounded = false;
         }
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Terrain")
+        if (other.tag == "Ground")
         {
             grounded = true;
         }
