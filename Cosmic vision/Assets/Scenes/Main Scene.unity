@@ -351,15 +351,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 467ee0ed91acb4c44bc08653198e4351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 5
+  rotationSpeed: 3
   player: {fileID: 110688747}
   head: {fileID: 81321817}
-  jumpHeigt: 1000
+  jumpHeigt: 0
   stamina: 0
   staminaRegen: 1
   staminaFull: 5
-  sprintSpeed: 15
-  tiredSpeed: 2
+  sprintSpeed: 10
+  tiredSpeed: 10
   normalSpeed: 10
   clampMin: -90
   clampMax: 90
