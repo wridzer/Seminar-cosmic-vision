@@ -37,9 +37,7 @@ public class ButtonPress : MonoBehaviour
                 door.GetComponent<Animator>().Play("open");
                 GetComponent<Animator>().SetBool("Pressed", true);
                 StartCoroutine(AnimStop());
-                //door.GetComponent<Transform>().rotation = Quaternion.Euler(0, -90, 0);
             }
-            Debug.Log("door open, animation play");
         }
     }
 

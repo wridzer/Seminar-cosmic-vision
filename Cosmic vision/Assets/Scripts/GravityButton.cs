@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class GravityButton : MonoBehaviour
 {
     private bool inRange;
-    public GameObject text;
+    public GameObject text, player;
+    public bool isGravity = true;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,15 +31,28 @@ public class GravityButton : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && inRange)
         {
             StartCoroutine(GravityGone());
-            Debug.Log("wtf bro");
-            Physics.gravity = new Vector3(0, -9.81f, 0);
         }
     }
 
     private IEnumerator GravityGone()
     {
         Physics.gravity = new Vector3(0, 0.5f, 0);
-        Debug.Log("doe vlieg");
+        isGravity = false;
+        player.GetComponent<NoGravityMovement>().GravityChange();
         yield return new WaitForSeconds(5f);
+        Physics.gravity = new Vector3(0, -9.81f, 0);
+        isGravity = true;
+        player.GetComponent<NoGravityMovement>().GravityChange();
+        RotateBack();
+    }
+
+    private void RotateBack()
+    {
+        Vector3 rot = new Vector3(
+            Mathf.LerpAngle(player.transform.rotation.x, 0f, Time.deltaTime),
+            Mathf.LerpAngle(player.transform.rotation.y, 90f, Time.deltaTime),
+            Mathf.LerpAngle(player.transform.rotation.z, 0f, Time.deltaTime)
+            );
+        player.transform.rotation = Quaternion.Euler(rot);
     }
 }
