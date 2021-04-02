@@ -83,6 +83,7 @@ namespace UnityTemplateProjects
 
         void Start()
         {
+
             var map = new InputActionMap("Simple Camera Controller");
 
             lookAction = map.AddAction("look", binding: "<Mouse>/delta");
@@ -120,6 +121,12 @@ namespace UnityTemplateProjects
         {
             m_TargetCameraState.SetFromTransform(transform);
             m_InterpolatingCameraState.SetFromTransform(transform);
+        }
+
+        private void Start()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         Vector3 GetInputTranslationDirection()
@@ -163,26 +170,26 @@ namespace UnityTemplateProjects
         {
             // Exit Sample  
 
-            if (IsEscapePressed())
+            /*if (IsEscapePressed())
             {
                 Application.Quit();
 				#if UNITY_EDITOR
 				UnityEditor.EditorApplication.isPlaying = false; 
 				#endif
-            }
+            }*/
 
             // Hide and lock cursor when right mouse button pressed
-            if (IsRightMouseButtonDown())
+            /*if (IsRightMouseButtonDown())
             {
                 Cursor.lockState = CursorLockMode.Locked;
-            }
+            }*/
 
             // Unlock and show cursor when right mouse button released
-            if (IsRightMouseButtonUp())
+            /*if (IsRightMouseButtonUp())
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-            }
+            }*/
 
             // Rotation
             if (IsCameraRotationAllowed())
@@ -267,7 +274,7 @@ namespace UnityTemplateProjects
             canRotate |= Gamepad.current != null ? Gamepad.current.rightStick.ReadValue().magnitude > 0 : false;
             return canRotate;
 #else
-            return Input.GetMouseButton(1);
+            return true;
 #endif
         }
 
@@ -276,7 +283,7 @@ namespace UnityTemplateProjects
 #if ENABLE_INPUT_SYSTEM
             return Mouse.current != null ? Mouse.current.rightButton.isPressed : false;
 #else
-            return Input.GetMouseButtonDown(1);
+            return true;
 #endif
         }
 
@@ -285,7 +292,7 @@ namespace UnityTemplateProjects
 #if ENABLE_INPUT_SYSTEM
             return Mouse.current != null ? !Mouse.current.rightButton.isPressed : false;
 #else
-            return Input.GetMouseButtonUp(1);
+            return false;
 #endif
         }
 
