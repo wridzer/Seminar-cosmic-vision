@@ -9,6 +9,14 @@ public class GravityButton : MonoBehaviour
     public GameObject text, player;
     public bool isGravity = true;
 
+    private Vector3 rot;
+    public Vector3 targetAngle = new Vector3(0f, 90f, 0f);
+
+    private void Start()
+    {
+        //rot = transform.eulerAngles;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -48,11 +56,10 @@ public class GravityButton : MonoBehaviour
 
     private void RotateBack()
     {
-        Vector3 rot = new Vector3(
-            Mathf.LerpAngle(player.transform.rotation.x, 0f, Time.deltaTime),
-            Mathf.LerpAngle(player.transform.rotation.y, 90f, Time.deltaTime),
-            Mathf.LerpAngle(player.transform.rotation.z, 0f, Time.deltaTime)
-            );
-        player.transform.rotation = Quaternion.Euler(rot);
+        float Lrotatex = Mathf.MoveTowardsAngle(transform.eulerAngles.x, targetAngle.x, 1 * Time.deltaTime);
+        float Lrotatey = Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetAngle.y, 1 * Time.deltaTime);
+        float Lrotatez = Mathf.MoveTowardsAngle(transform.eulerAngles.z, targetAngle.z, 1 * Time.deltaTime);
+        //rot = new Vector3(Lrotatex, Lrotatey, Lrotatez);
+        player.transform.eulerAngles = new Vector3(Lrotatex, Lrotatey, Lrotatez);
     }
 }
