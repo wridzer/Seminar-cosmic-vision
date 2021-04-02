@@ -1391,7 +1391,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  rotationLerpTime: 0.224
+  rotationLerpTime: 0.927
   invertY: 1
 --- !u!1 &116300746
 GameObject:
