@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
     public float clampMin = -15;
     public float clampMax = 10;
 
+    public float speed = 40f;
+    public bool rotateBitch;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +43,14 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < -100)
         {
             Die();
+        }
+        if (rotateBitch)
+        {
+            this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, Quaternion.Euler(0, 90, 0), speed * Time.deltaTime);
+            if(transform.rotation == Quaternion.Euler(0, 90, 0))
+            {
+                rotateBitch = false;
+            }
         }
     }
 
@@ -129,6 +140,6 @@ public class PlayerController : MonoBehaviour
 
     public void RotateBack()
     {
-
+        rotateBitch = true;
     }
 }
