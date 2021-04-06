@@ -2158,10 +2158,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4303581215954726051, guid: 883f8cdf82ffd5741baf46f86067a639, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 7739188443502092126, guid: 883f8cdf82ffd5741baf46f86067a639, type: 3}
       propertyPath: m_Name
       value: EarthHologramObject
