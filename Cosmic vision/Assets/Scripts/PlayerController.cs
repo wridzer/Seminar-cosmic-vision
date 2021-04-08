@@ -153,16 +153,13 @@ public class PlayerController : MonoBehaviour
 
     void itemPickup()
     {
-        Debug.Log("ik wil pakken");
         if (!hasItem)
         {
             RaycastHit hit;
             if (Physics.Raycast(head.transform.position, transform.TransformDirection(Vector3.forward), out hit, grabRange))
             {
-                Debug.Log("kannie prop vinden");
                 if (hit.collider.tag == "Prop")
                 {
-                    Debug.Log("ik pak het");
                     hit.collider.transform.parent = gameObject.transform;
                     hasItem = true;
                 }
