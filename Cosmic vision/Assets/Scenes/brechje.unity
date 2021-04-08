@@ -1018,7 +1018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67445d5abdc0a254dbdd592c51ef3829, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.485
+      value: 5.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67445d5abdc0a254dbdd592c51ef3829, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1066,7 +1066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 67445d5abdc0a254dbdd592c51ef3829, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67445d5abdc0a254dbdd592c51ef3829, type: 3}
@@ -16569,18 +16569,6 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4fec71ecb3aa75e4786146ca8a6d9dbb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1613.3907
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4fec71ecb3aa75e4786146ca8a6d9dbb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1613.3907
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4fec71ecb3aa75e4786146ca8a6d9dbb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1613.3907
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4fec71ecb3aa75e4786146ca8a6d9dbb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.44
       objectReference: {fileID: 0}
@@ -16620,10 +16608,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 4fec71ecb3aa75e4786146ca8a6d9dbb, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6f9a81ad6359d154983ec2f2ad4d731b, type: 2}
     - target: {fileID: 919132149155446097, guid: 4fec71ecb3aa75e4786146ca8a6d9dbb, type: 3}
       propertyPath: m_Name
       value: dome2
