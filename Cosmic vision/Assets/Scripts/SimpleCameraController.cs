@@ -14,9 +14,6 @@ public class SimpleCameraController : MonoBehaviour
     public float lookRotateSpeed = 90f;
     private Vector2 lookInput, screenCenter, mouseDistance;
 
-    public int score = 0;
-    public int maxScore = 5;
-
 
     //private float rollInput;
     //public float rollSpeed = 90f, rollAcceleration = 3.5f;
@@ -25,6 +22,7 @@ public class SimpleCameraController : MonoBehaviour
     {
         screenCenter.x = Screen.width * .5f;
         screenCenter.y = Screen.height * .5f;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame
@@ -61,11 +59,5 @@ public class SimpleCameraController : MonoBehaviour
         mouseDistance.y = (lookInput.y - screenCenter.y) / screenCenter.y;
 
         mouseDistance = Vector2.ClampMagnitude(mouseDistance, 1f);
-    }
-
-    void CalculateScore()
-    {
-        score++;
-        Debug.Log(score);
     }
 }
