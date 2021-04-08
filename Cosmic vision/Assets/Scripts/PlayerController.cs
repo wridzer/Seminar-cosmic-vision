@@ -29,11 +29,15 @@ public class PlayerController : MonoBehaviour
     public float speed = 40f;
     public bool rotateBitch;
 
+    [SerializeField] private float grabRange = 10;
+    [SerializeField] private bool hasItem;
+
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        hasItem = false;
     }
 
     // Update is called once per frame
@@ -95,9 +99,13 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-        if (Input.GetKey(KeyCode.R))
+        /*if (Input.GetKey(KeyCode.R))
         {
             SceneManager.LoadScene("SampleScene");
+        }*/
+        if (Input.GetMouseButtonDown(0))
+        {
+            itemPickup();
         }
 
         //player rotation
@@ -141,5 +149,33 @@ public class PlayerController : MonoBehaviour
     public void RotateBack()
     {
         rotateBitch = true;
+    }
+
+    void itemPickup()
+    {
+        Debug.Log("ik wil pakken");
+        if (!hasItem)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(head.transform.position, transform.TransformDirection(Vector3.forward), out hit, grabRange))
+            {
+                Debug.Log("kannie prop vinden");
+                if (hit.collider.tag == "Prop")
+                {
+                    Debug.Log("ik pak het");
+                    hit.collider.transform.parent = gameObject.transform;
+                    hasItem = true;
+                }
+            }
+        } else {
+            foreach (Transform child in transform)
+            {
+                if (child.tag == "Prop")
+                {
+                    child.transform.parent = null;
+                    hasItem = false;
+                }
+            }
+        }
     }
 }

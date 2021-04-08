@@ -987,6 +987,24 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &87807786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+  m_PrefabInstance: {fileID: 1346154276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &87807789
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87807786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.04, z: 0.04}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &106917168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1315,8 @@ MonoBehaviour:
   clampMax: 90
   speed: 20
   rotateBitch: 0
+  grabRange: 20
+  hasItem: 0
 --- !u!54 &110688753
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2511,6 +2531,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219703570}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &226038188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+  m_PrefabInstance: {fileID: 1674670746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &226038191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226038188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.04, z: 0.04}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &234414315
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,6 +3047,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293027407}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &297258668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+  m_PrefabInstance: {fileID: 2073033262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &297258671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297258668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.04, z: 0.04}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &302136538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3251,6 +3307,10 @@ PrefabInstance:
     - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_Name
       value: Jaspis Gemstone_vdjmdjyjw_3d
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
@@ -5091,7 +5151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6077670132041676402, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.803
+      value: 2.9370003
       objectReference: {fileID: 0}
     - target: {fileID: 6077670132041676402, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5132,6 +5192,10 @@ PrefabInstance:
     - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_Name
       value: BlackHole (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
@@ -6684,7 +6748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6077670132041676402, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.868
+      value: 2.943
       objectReference: {fileID: 0}
     - target: {fileID: 6077670132041676402, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6725,6 +6789,10 @@ PrefabInstance:
     - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_Name
       value: BlackHole (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
@@ -8479,7 +8547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6077670132041676402, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.766
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 6077670132041676402, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8520,6 +8588,10 @@ PrefabInstance:
     - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_Name
       value: BlackHole (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
@@ -10322,6 +10394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackHole (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
+      propertyPath: m_TagString
+      value: Prop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
 --- !u!1 &932086405
@@ -11444,6 +11520,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169116015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1170004005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+  m_PrefabInstance: {fileID: 1191844020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1170004008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170004005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.04, z: 0.04}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1182878777
 GameObject:
   m_ObjectHideFlags: 0
@@ -11601,7 +11695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4888109330598305402, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.205
+      value: 5.348
       objectReference: {fileID: 0}
     - target: {fileID: 4888109330598305402, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11638,6 +11732,10 @@ PrefabInstance:
     - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_Name
       value: Jaspis Gemstone_vdjmdjyjw_3d (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
@@ -13546,7 +13644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4888109330598305402, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.205
+      value: 5.348
       objectReference: {fileID: 0}
     - target: {fileID: 4888109330598305402, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13583,6 +13681,10 @@ PrefabInstance:
     - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_Name
       value: Jaspis Gemstone_vdjmdjyjw_3d (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
@@ -15413,6 +15515,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590667108}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1601593930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+  m_PrefabInstance: {fileID: 311102418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1601593933
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601593930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.04, z: 0.04}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1612044619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15953,7 +16073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4888109330598305402, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.205
+      value: 5.348
       objectReference: {fileID: 0}
     - target: {fileID: 4888109330598305402, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15990,6 +16110,10 @@ PrefabInstance:
     - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_Name
       value: Jaspis Gemstone_vdjmdjyjw_3d (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
@@ -16676,6 +16800,10 @@ PrefabInstance:
     - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
       propertyPath: m_Name
       value: BlackHole (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
@@ -19797,8 +19925,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackHole
       objectReference: {fileID: 0}
+    - target: {fileID: 6077670132041676406, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
+      propertyPath: m_TagString
+      value: Prop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd3bf74fd23e8540989da8bc4ec0d96, type: 3}
+--- !u!1 &1970569885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+  m_PrefabInstance: {fileID: 2091184255}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1970569888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970569885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.04, z: 0.04}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1972102355
 GameObject:
   m_ObjectHideFlags: 0
@@ -20879,6 +21029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jaspis Gemstone_vdjmdjyjw_3d (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+      propertyPath: m_TagString
+      value: Prop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
 --- !u!1 &2073311454
@@ -21137,6 +21291,10 @@ PrefabInstance:
     - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
       propertyPath: m_Name
       value: Jaspis Gemstone_vdjmdjyjw_3d (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688002123843244841, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
+      propertyPath: m_TagString
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec9dca55fc4b7742a03a22838ebbec3, type: 3}
