@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 40f;
     public bool rotateBitch;
 
-    [SerializeField] private float grabRange = 10;
+    [SerializeField] private float grabRange = 5;
     [SerializeField] private bool hasItem;
 
     // Start is called before the first frame update
