@@ -149,6 +149,7 @@ public class PlayerController : MonoBehaviour
     public void RotateBack()
     {
         rotateBitch = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void itemPickup()
